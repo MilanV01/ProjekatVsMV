@@ -1,0 +1,73 @@
+body{
+    background-image:url("../resursi/pozadina2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+
+
+form {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border-color: #8ab6d6;
+    box-shadow: 0 0 5px #8ab6d6;
+}
+
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #4b86b4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+    background-color: #70a6ce;
+}
+
+form button[type="submit"]:active,
+form button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4b86b4;
+}

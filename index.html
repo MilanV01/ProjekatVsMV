@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>Почетна Страница</title>
-<link rel="stylesheet" href="pocetna.css">
+<link rel="stylesheet" href="css/pocetna.css">
 </head>
 <body>
-<h2>Молимо изаберите опцију:</h2>
+<h2>Изаберите опцију:</h2>
+
 <nav>
-<ul>
-	<li><a href="registracija.html">Региструјте се</a></li>
-	<li><a href="prijava.html">Пријави се</a></li>
-	<li>Изаберите своју улогу:</li>
 	<ul>
-		<li><a href="admin.html">Администратор</a></li>
-		<li><a href="blagajnik.html">Благајник</a></li>
-		<li><a href="korisnik.html">Регистровани корисник</a></li>
-		<li><a href="blokiran.html">Блокирани корисник</a></li>
-	</ul>
-	<li><a href="događaji.html">Приказ свих актуелних догађаја</a></li>
-	<li><a href="pretraga.html">Претражите догађаје</a></li>
-</ul>
+		<li><a href="registracija.html">Региструјте се</a></li>
+		<li class="dropdown"><a href="prijava.html">Пријави се</a>
+		  <ul class="dropdown-content">
+			<li><a href="admin.html">Администратор</a></li>
+			<li><a href="blagajnik.html">Благајник</a></li>
+			<li><a href="korisnik.html">Регистровани корисник</a></li>
+			<li><a href="blokiran.html">Блокирани корисник</a></li>
+		  </ul>
+		</li>
+		<li><a href="događaji.html">Приказ свих актуелних догађаја</a></li>
+		<li><a href="pretraga.html">Претражите догађаје</a></li>
+	  </ul>
 </nav>
 
 
