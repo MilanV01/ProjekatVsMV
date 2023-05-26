@@ -5,6 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-position: center;
     }
 
 
@@ -20,54 +21,61 @@ form {
     transform: translate(-50%, -50%);
 }
 
-form label {
+label {
     display: block;
     margin-bottom: 10px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="password"] {
-    display: block;
-    width: 100%;
+input {
     padding: 10px;
     border: 1px solid #aaa;
     border-radius: 5px;
     margin-bottom: 20px;
-    box-sizing: border-box;
     background-color: #fff;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="tel"]:focus,
-form input[type="password"]:focus {
+input:focus {
     outline: none;
-    border-color: #8ab6d6;
-    box-shadow: 0 0 5px #8ab6d6;
+    box-shadow: 0 0 5px magenta;
 }
 
-form button[type="submit"] {
+button {
     display: block;
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    background-color: #4b86b4;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    background-color: #457ca7;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-form button[type="submit"]:hover {
-    background-color: #70a6ce;
+button:hover {
+    background-color: #79aed6;
+    color:rgb(37, 37, 37);
 }
 
-form button[type="submit"]:active,
-form button[type="submit"]:focus {
+ button:active {
     outline: none;
-    box-shadow: 0 0 5px #4b86b4;
+    box-shadow: 0 0 12px #457ca7;
 }
+.form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .error-message {
+    align-self: flex-start;
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .error-message2 {
+    align-self: flex-start;
+    color: red;
+    font-weight: bold;
+  }

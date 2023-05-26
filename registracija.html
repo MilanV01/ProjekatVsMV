@@ -2,19 +2,22 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Регистрација корисника</title>
+	<title>Регистрација</title>
+	<meta name="apitoken" content="GrGPqaYnq6wCyOSRG4LwwN3M8bnkct4dAG10FhJza0VvL0ytk9nycPfhqCzWLJGjcENzxH63Wp47BEXJJ56ZwZuxNF">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script src="js/registracija.js"></script>
     <link rel="stylesheet" href="css/registracija.css">
 </head>
 <body>
-	<form>
-		<label for="ime_prezime">Име и презиме</label>
+	<form id="reg_forma" method="POST" action="https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/register">
+		<div class="form-container">
+		<label for="ime_prezime">Име и Презиме</label>
 		<input type="text" id="ime_prezime" name="ime_prezime" placeholder="Овде унети име и презиме" required>
-
 		<label for="email">Имејл</label>
 		<input type="email" id="email" name="email" placeholder="Овде унети имејл" required>
-		
+
 		<label for="telefon">Телефон</label>
-		<input type="tel" id="telefon" name="telefon" placeholder="Овде унети телефон" required>
+		<input type="tel" id="telefon" name="telefon" placeholder="Овде унети телефон">
 		
 		<label for="lozinka">Лозинка</label>
 		<input type="password" id="lozinka" name="lozinka" placeholder="Овде унети лозинку" required>
@@ -23,4 +26,7 @@
         </label>
 		<input type="password" id="ponovljena_lozinka" name="ponovljena_lozinka" placeholder="Овде унети поновљену лозинку" required>
         <button type="submit" id="registracija" name="registracija">Региструј се</button>
+
+	</div>
+	<div ></div>
 </form>
