@@ -38,7 +38,6 @@ $(document).ready(function() {
 
 
 telefonInput.on('input', function() {
-  // Provera za telefon
   var regex = /^\+[1-9]\d{8,13}$/;
   var telefon = telefonInput.val().trim();
 
