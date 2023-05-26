@@ -120,8 +120,6 @@ telefonInput.on('input', function() {
         "Accept": "application/json"
     },
     "processData": false,
-    "mimeType": "mulipart/form-data",
-    "contentType": false,
     "data": forma,
     "dataType": 'json',
     'success': function(odgovor){
