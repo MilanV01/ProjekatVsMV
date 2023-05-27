@@ -1,0 +1,75 @@
+body{
+    background-image:url("../resursi/background-buehne-unterseiten.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    
+    
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        font-family:'Segoe UI';
+        color:#7EC2CE;
+        margin-bottom: 33px;
+    
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    li {
+        margin: 0 13px;
+    }
+    
+    a {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 2px solid #BBFEBC;
+        border-radius: 21px;
+        text-decoration: none;
+        color: #BBFEBC;
+        background-color: purple;
+        font-weight: bold;
+        transition:  0.2s ease-in-out;
+    }
+    
+    a:hover {
+        background-color: white;
+        color:#333;
+        transform: translateY(-3px);
+        box-shadow: 0 2px 4px lightslategrey;
+    }
+    
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px darkslategray;
+        padding: 10px 8px;
+        z-index: 1;
+      }
+    
+      .dropdown-content li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+      }

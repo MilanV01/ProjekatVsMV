@@ -108,7 +108,9 @@ telefonInput.on('input', function() {
   var forma = new FormData();
   forma.append("name", $('#ime_prezime').val());
   forma.append("email", $('#email').val());
-  forma.append("phone", $('#telefon').val());
+  if (telefon != ''){
+    forma.append("phone", $('#telefon').val());
+  }
   forma.append("password", $('#lozinka').val());
   forma.append("apitoken", $('meta[name="apitoken"]').attr('content'));
 
@@ -120,9 +122,10 @@ telefonInput.on('input', function() {
         "Accept": "application/json"
     },
     "processData": false,
+    "contentType": false,
     "data": forma,
     "dataType": 'json',
-    'success': function(odgovor){
+    "success": function(odgovor){
           if(odgovor.error !== undefined){
             poruka=odgovor.error;
             registracijaDugme.next('.error-message2').remove();
@@ -130,13 +133,13 @@ telefonInput.on('input', function() {
               $('#email').val('');
           }
           else {
-              poruka=odgovor.error;
               window.location = 'prijava.html';
           }
       },
-    'error': function(odgovor){
-      poruka=odgovor.error;
-      console.log(poruka);
+    "error": function(odgovor){
+      poruka=odgovor.responseJSON.error;
+      registracijaDugme.next('.error-message2').remove();
+      registracijaDugme.after('<div class="error-message2">' + poruka + '</div>');
     }
 };
 $.ajax(config);
