@@ -2,20 +2,48 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">  <title>Administratorski deo</title>
+  <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+  <title>Administratorski deo</title>
   <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <body>
-        <h2>Добродошли, администраторе!</h2>
-        <nav>
-          <ul>
-            <li><a href="uloge.html" class="button">Улоге</a></li>
-            <li><a href="korisnici.html" class="button">Корисници</a></li>
-            <li><a href="lokacije.html" class="button">Локације</a></li>
-            <li><a href="dogadjaji.html" class="button">Догађаји</a></li>
-            <li><a href="rezervacije.html" class="button">Резервације</a></li>
-
-          </ul>
-  </body>
+    <h2>Добродошли, администраторе!</h2>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="uloge.html" class="button">Улоге</a>
+            </li>
+            <li class="dropdown">
+                <a href="korisnici.html" class="button">Корисници</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Додај корисника</a></li>
+                    <li><a href="#">Мењај корисника</a></li>
+                    <li><a href="#">Избриши корисника</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="lokacije.html" class="button">Локације</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Додавај локацију</a></li>
+                    <li><a href="#">Мењај локацију</a></li>
+                    <li><a href="#">Избриши локацију</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="dogadjaji.html" class="button">Догађаји</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Додај догађај</a></li>
+                    <li><a href="#">Мењај догађај</a></li>
+                    <li><a href="#">Избриши догађај</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <a href="rezervacije.html" class="button">Резервације</a>
+              <ul class="dropdown-content">
+                  <li><a href="#">Избриши резервацију</a></li>
+              </ul>
+          </li>
+        </ul>
+    </nav>
+</body>
 </html>
