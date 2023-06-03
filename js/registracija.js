@@ -21,17 +21,17 @@ $(document).ready(function() {
         $(this).css('outline', '2px solid orange');
         $(this).css('box-shadow', 'none');
         imePrezimeInput.next('.error-message').remove();
-        imePrezimeInput.after('<div class="error-message">Ime i prezime je prekratko.</div>');
+        imePrezimeInput.after('<div class="error-message">Име и презиме је прекратко</div>');
       } else if (imePrezime.length > 180) {
         $(this).css('outline', '2px solid orange');
         $(this).css('box-shadow', 'none');
         imePrezimeInput.next('.error-message').remove();
-        imePrezimeInput.after('<div class="error-message">Ime i prezime je predugo.</div>');
+        imePrezimeInput.after('<div class="error-message">Име и презиме је предугачко</div>');
       } else {
         $(this).css('outline', '2px solid orange');
         $(this).css('box-shadow', 'none');
         imePrezimeInput.next('.error-message').remove();
-        imePrezimeInput.after('<div class="error-message">Ime i prezime nije ispravno napisano.</div>');
+        imePrezimeInput.after('<div class="error-message">Име и презиме није правилно написано</div>');
       }
     }
     });
@@ -49,7 +49,7 @@ telefonInput.on('input', function() {
     $(this).css('box-shadow', 'none');
     telefonInput.next('.error-message').remove();
     $(this).css('outline', '2px solid orange');
-    telefonInput.after('<div class="error-message">Telefon nije ispravan.</div>');
+    telefonInput.after('<div class="error-message">Телефон није исправан</div>');
   }})
 
   lozinkaInput.on('input', function() {
@@ -63,7 +63,7 @@ telefonInput.on('input', function() {
       $(this).css('outline', '2px solid orange');
       $(this).css('box-shadow', 'none');
       lozinkaInput.next('.error-message').remove();
-      lozinkaInput.after('<div class="error-message">Lozinka nije dovoljno jaka.</div>');
+      lozinkaInput.after('<div class="error-message">Лозинка није довољно јака</div>');
     }
   });
 
@@ -77,7 +77,7 @@ telefonInput.on('input', function() {
       ponovljenaLozinkaInput.next('.error-message').remove();
     } else {
       ponovljenaLozinkaInput.next('.error-message').remove();
-      ponovljenaLozinkaInput.after('<div class="error-message">Lozinke se ne poklapaju.</div>');
+      ponovljenaLozinkaInput.after('<div class="error-message">Лозинке се не поклапају</div>');
       ponovljenaLozinkaInput.css('outline', '2px solid orange');
     }
   });
@@ -87,10 +87,8 @@ telefonInput.on('input', function() {
 
       if (email === '') {
         emailInput.next('.error-message').remove();
-        emailInput.after('<div class="error-message">Niste uneli email.</div>');
+        emailInput.after('<div class="error-message">Нисте унели имејл</div>');
         emailInput.css('outline', '2px solid orange');
-      } else {
-
       }
     });
 

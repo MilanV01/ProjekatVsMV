@@ -67,15 +67,28 @@ button:hover {
     flex-direction: column;
   }
 
-  .error-message {
+.error-message {
     align-self: flex-start;
     color: orange;
     font-weight: bold;
     margin-bottom: 20px;
   }
 
-  .error-message2 {
+.error-message2 {
     align-self: flex-start;
     color: red;
     font-weight: bold;
   }
+
+select {
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+
+select:focus {
+	outline: none;
+	box-shadow: 0 0 5px magenta;
+}
