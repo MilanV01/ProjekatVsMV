@@ -112,6 +112,7 @@ telefonInput.on('input', function() {
   forma.append("password", $('#lozinka').val());
   forma.append("apitoken", $('meta[name="apitoken"]').attr('content'));
 
+
   var config = {
     "url": "https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/register",
     "method": "POST",

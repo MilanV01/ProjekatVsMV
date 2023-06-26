@@ -1,0 +1,43 @@
+body {
+    background-image: url("../resursi/pozadina1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: purple;
+    margin-bottom: 33px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 4px lightslategrey;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: purple;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #e5e5e5;
+  }

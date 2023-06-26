@@ -103,7 +103,7 @@ $(document).ready(function() {
       $('#lokacija_label').hide();
   
       $('#uloga').on('change', function(e){
-        if($('#uloga').val() == "blagajnik"){
+        if($('#uloga').val() == "2"){
             $('#lokacija').show();
             $('#lokacija_label').show();
         }else{
@@ -126,36 +126,44 @@ $(document).ready(function() {
     forma.append("userRoleId", $('#uloga').val());
     forma.append("locationId", $('#lokacija').val());
     forma.append("apitoken", $('meta[name="apitoken"]').attr('content'));
-  
+
+    // console.log(localStorage.getItem("token"));
+    // za proveru
+    var token = localStorage.getItem("token");
+ 
+
     var config = {
-      "url": "https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik",
-      "method": "POST",
-      "timeout": 0,
-      "headers": {
-          "Accept": "application/json",
-          "Authorization": "Bearer " + localStorage.getItem("apitoken")
+      url: "https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik",
+      method: "POST",
+      timeout: 0,
+      headers: {
+        Accept: "application/json",
+        Authorization: "Bearer " + token,
       },
-      "processData": false,
-      "contentType": false,
-      "data": forma,
-      "dataType": 'json',
-      "success": function(odgovor){
-            if(odgovor.error !== undefined){
-              poruka=odgovor.responseJSON.message;
-              registracijaDugme.next('.error-message2').remove();
-              registracijaDugme.after('<div class="error-message2">' + poruka + '</div>');
-                $('#email').val('');
-            }
-            else {
-                window.location = 'korisnici.html';
-            }
-        },
-      "error": function(odgovor){
-        poruka=odgovor.responseJSON.message;
-        registracijaDugme.next('.error-message2').remove();
-        registracijaDugme.after('<div class="error-message2">' + poruka + '</div>');
-      }
-  };
-  $.ajax(config);
-  })
+      processData: false,
+      contentType: false,
+      data: forma,
+      dataType: "json",
+      success: function (odgovor) {
+        if (odgovor.error !== undefined) {
+          console.log(odgovor);
+          // poruka = odgovor.responseJSON.message;
+          // registracijaDugme.next(".error-message2").remove();
+          // registracijaDugme.after('<div class="error-message2">' + poruka + "</div>");
+          $('#email').val('');
+        } else {
+          console.log(odgovor);
+          window.location = 'korisnici.html';
+        }
+      },
+      error: function (odgovor) {
+        console.log(odgovor);
+        poruka = odgovor.responseJSON.message;
+        registracijaDugme.next(".error-message2").remove();
+        registracijaDugme.after('<div class="error-message2">' + poruka + "</div>");
+      },
+    };
+
+    $.ajax(config);
   });
+});
