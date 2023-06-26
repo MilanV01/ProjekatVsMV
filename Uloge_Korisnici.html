@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">  <title>Одабрани Корисници</title>
+  <link rel="stylesheet" href="css/tabele.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script src="js/lista_uloga.js"></script>
+
+    </head>
+    <body>
+      <h2>Листа Одабраних Корисника</h2>
+      <table id="korisnici">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Улога</th>
+            <th>Име и Презиме</th>
+            <th>Е-мејл</th>
+            <th>Телефон</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+       <script>
+        $(document).ready(function() {
+            var Parametri = new URLSearchParams(window.location.search);
+            var korisniciJson = Parametri.get('korisnici');
+          
+            var korisnici = JSON.parse(decodeURIComponent(korisniciJson));
+            var tbody = $('#korisnici');
+          
+            korisnici.forEach(function(korisnik) {
+              var red = $('<tr>');
+              red.append($('<td>').text(korisnik.id));
+              red.append($('<td>').text(korisnik.uloga));
+              red.append($('<td>').text(korisnik.imePrezime));
+              red.append($('<td>').text(korisnik.email));
+              red.append($('<td>').text(korisnik.telefon));
+              tbody.append(red);
+            });
+          });
+          
+      </script>
+    </body>
+    </html>

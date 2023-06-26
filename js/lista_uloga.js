@@ -40,9 +40,30 @@ $(document).ready(function() {
               red.append($('<td>').text(uloga.broj_korisnika).addClass('broj-korisnika'));
   
               red.find('.broj-korisnika').click(function() {
-
+                var ulogaId = uloga.id;
+              
+                var korisniciUloge = korisnici.filter(function(korisnik) {
+                  return korisnik.uloga.id === ulogaId;
+                });
+              
+                var korisniciZaPrikaz = korisniciUloge.map(function(korisnik) {
+                  return {
+                    id: korisnik.id,
+                    imePrezime: korisnik.imePrezime,
+                    email: korisnik.email,
+                    telefon: korisnik.telefon,
+                    uloga: korisnik.uloga.naziv
+                  };
+                });
+              
+                var korisniciJson = JSON.stringify(korisniciZaPrikaz);
+              
+                var url = 'Uloge_Korisnici.html?korisnici=' + encodeURIComponent(korisniciJson);
+              
+                window.open(url);
               });
-  
+              
+
               tbody.append(red);
             });
           },
