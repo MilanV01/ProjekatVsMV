@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 119%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px ;
+    margin-bottom:7px;
+    margin-left: 10px ;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-left:10px;
+
+}
+
+select {
+    width: 70px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.snimi {
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 5px ;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.snimi:hover {
+    background-color: #45a049;
+}
+
+.skriven {
+    display: none;
+  }
+
+.error {
+    color: red;
+  }
+
+.success {
+    color: green;
+  }

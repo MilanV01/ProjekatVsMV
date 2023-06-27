@@ -58,7 +58,7 @@ $(document).ready(function() {
               
                 var korisniciJson = JSON.stringify(korisniciZaPrikaz);
               
-                var url = 'Uloge_Korisnici.html?korisnici=' + encodeURIComponent(korisniciJson);
+                var url = 'uloge_korisnici.html?korisnici=' + encodeURIComponent(korisniciJson);
               
                 window.open(url);
               });

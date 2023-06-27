@@ -126,7 +126,6 @@ $(document).ready(function() {
     forma.append("userRoleId", $('#uloga').val());
     forma.append("locationId", $('#lokacija').val());
     forma.append("apitoken", $('meta[name="apitoken"]').attr('content'));
-
     // console.log(localStorage.getItem("token"));
     // za proveru
     var token = localStorage.getItem("token");
