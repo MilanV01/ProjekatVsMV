@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+    <title>Одабрани Корисник</title>
+    <link rel="stylesheet" href="css/lokacija&korisnik.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/izmena_korisnika.js"></script>
+</head>
+<body>
+
+    <form id="izmenaForma">
+        <input type="hidden" id="idKorisnika" name="id" value="">
+        <div>
+            <label for="imePrezime">Име и презиме:</label>
+            <input type="text" id="imePrezime" name="imePrezime">
+        </div>
+        <div>
+            <label for="email">Имејл:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="telefon">Телефон:</label>
+            <input type="text" id="telefon" name="telefon">
+        </div>
+        <div>
+            <label for="lozinka">Лозинка:</label>
+            <input type="password" id="lozinka" name="lozinka" required >
+        </div>
+        <div>
+            <label for="uloga">Улога:</label>
+            <select id="uloga" name="uloga">
+                <!-- Ovde treba da se generiše lista opcija za uloge -->
+            </select>
+        </div>
+        <div id="lokacijaDiv">
+            <label for="lokacija">Локација:</label>
+            <select id="lokacija" name="lokacija">
+                <!-- Ovde treba da se generiše lista opcija za lokacije (samo ako je uloga "blagajnik") -->
+            </select>
+        </div>
+        <button type="submit" class="snimi">Сними</button>
+        <div id="poruka" class="skriven"></div>
+
+    </form>
+
+</body>
+</html>

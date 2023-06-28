@@ -29,25 +29,13 @@ $(document).ready(function() {
                 red += '<td><a href="uloga.html?id=' + korisnik.uloga.id + '">' + korisnik.uloga.naziv + '</a></td>';
 
                 if (korisnik.uloga.naziv === 'благајник') {
-                    red += '<td><a href="dogadjaji.html?id=' + korisnik.id + '">3</a></td>';
+                    red += '<td><a href="dogadjaji.html?id=' + korisnik.id + '">/</a></td>';
                 } else {
                     red += '<td></td>';
                 }
 
                 if (korisnik.uloga.naziv === 'регистровани корисник' || korisnik.uloga.naziv === 'блокирани корisnik') {
-                    red += '<td><a href="rezervisane_ulaznice.html?id=' + korisnik.id + '">/</a></td>';
-                } else {
-                    red += '<td></td>';
-                }
-
-                if (korisnik.uloga.naziv === 'регистровани korisnik' || korisnik.uloga.naziv === 'блокирани корisnik') {
-                    red += '<td><a href="kupljene_ulaznice.html?id=' + korisnik.id + '">/</a></td>';
-                } else {
-                    red += '<td></td>';
-                }
-
-                if (korisnik.uloga.naziv === 'регистровани korisnik' || korisnik.uloga.naziv === 'блокирани корisnik') {
-                    red += '<td><a href="otkazane_ulaznice.html?id=' + korisnik.id + '">/</a></td>';
+                    red += '<td>/</td>';
                 } else {
                     red += '<td></td>';
                 }
@@ -60,4 +48,38 @@ $(document).ready(function() {
             });
         }
     });
+    $(document).on('click', '.izmeni', function(event) {
+        event.preventDefault();
+        
+        // Dobijanje ID-a korisnika iz tabele
+        var idKorisnika = $(this).closest('tr').find('td:first').text();
+        
+        // Redirekcija na stranicu za izmenu korisnika sa odgovarajućim ID-om
+        window.location.href = 'izmena_korisnika.html?id=' + idKorisnika;
+    });
+
+    $(document).on('click', '.obrisi', function(event) {
+        event.preventDefault();
+        
+        var idKorisnika = $(this).closest('tr').find('td:first').text();
+        console.log(idKorisnika)
+        if (confirm("Da li ste sigurni da želite da obrišete korisnika?")) {
+            $.ajax({
+                url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik/' + idKorisnika + '?apitoken=' + apitoken,
+                type: 'DELETE',
+                headers: {
+                    Accept: "application/json",
+                    Authorization: "Bearer " + token,
+                },
+                success: function() {
+                    alert('Korisnik je uspešno obrisan!, osvezite stranicu.');
+                },
+                error: function(odgovor) {
+                    var greska = odgovor.responseJSON.message;
+                    alert('Došlo je do greške prilikom brisanja korisnika: ' + greska);
+                }
+            });
+        }
+    });
+
 });
