@@ -42,6 +42,9 @@ $('#prijava_forma').on('submit', function (a) {
                 else if(type === 'регистровани корисник'){
                     window.location = 'korisnik.html';
                 }
+                else if(type === 'блокирани корисник'){
+                    window.location = 'index.html';
+                }
             }
         },
         "error": function(odgovor){

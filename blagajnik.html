@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Благајна</title>
-<link rel="stylesheet" href="css/pocetna.css">
-<meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+  <meta charset="UTF-8">
+  <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+  <title>Дeo за Благајника</title>
+  <link rel="stylesheet" href="css/ulogovan.css">
+  <script src="js/status.js"></script>
 </head>
 <body>
-<h2>Изаберите опцију:</h2>
-
-
+    <h2>Добродошли, благајниче!</h2>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="lokacije.html" class="button">Локације</a>
+                <ul class="dropdown-content">
+                    <li><a href="kreiraj_lok.html">Додај локацију</a></li>
+                    <li><a href="odabrana_lokacija.html?id=1">Измени локацију</a></li>
+                    <li><a href="lokacije.html">Брисање локације</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="dogadjaji.html" class="button">Догађаји</a>
+                <ul class="dropdown-content">
+                    <li><a href="kreiraj_dogadjaj.html">Додавај догађај</a></li>
+                    <li><a href="dogadjaji.html">Измена догађаја</a></li>
+                    <li><a href="dogadjaji.html">Брисање догађаја</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="ulaznice.html" class="button">Улазнице</a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>

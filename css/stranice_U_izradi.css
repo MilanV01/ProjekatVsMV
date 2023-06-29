@@ -1,0 +1,23 @@
+body {
+    background-image:url("../resursi/dashboard-background-sx.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color:#9C1C1C;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    color:lightgray;
+    font-size: 18px;
+}
