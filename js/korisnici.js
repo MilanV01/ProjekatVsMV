@@ -62,7 +62,6 @@ $(document).ready(function() {
         event.preventDefault();
         
         var idKorisnika = $(this).closest('tr').find('td:first').text();
-        console.log(idKorisnika)
         if (confirm("Da li ste sigurni da želite da obrišete korisnika?")) {
             $.ajax({
                 url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/korisnik/' + idKorisnika + '?apitoken=' + apitoken,

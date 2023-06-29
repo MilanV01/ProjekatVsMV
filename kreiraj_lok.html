@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Креирај Локацију</title>
+        <meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="js\kreiraj_lok.js"></script>
+        <link rel="stylesheet" href="css/lokacija&korisnik.css"></head>
+      </head>
+<body>
+    <form id="kreiranje-lokacije">
+        <input type="hidden" id="lokacija-id">
+        <label for="naziv">Назив локације:</label>
+        <input type="text" id="naziv" name="naziv" required><br>
+        <label for="adresa" >Адреса:</label>
+        <input type="text" id="adresa" name="adresa" required><br>
+        <label for="grad">Град:</label>
+        <input type="text"  id="grad" name="grad" required><br>
+        <label for="opis">Опис:</label>
+        <textarea id="opis" name="opis"></textarea><br>
+        <label for="radno-vreme">Радно време:</label>
+        <div id="radno-vreme-div">
+            <div class="dan-container">
+                <label>Понедељак:</label>
+                <input type="hidden" class="dan" value="1">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Уторак:</label>
+                <input type="hidden" class="dan" value="2">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Среда:</label>
+                <input type="hidden" class="dan" value="3">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Четвртак:</label>
+                <input type="hidden" class="dan" value="4">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Петак:</label>
+                <input type="hidden" class="dan" value="5">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Субота:</label>
+                <input type="hidden" class="dan" value="6">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+            <div class="dan-container">
+                <label>Недеља:</label>
+                <input type="hidden" class="dan" value="7">
+                <input type="number" class="sat-od" min="0" max="23" placeholder="Сат">
+                <input type="number" class="minut-od" min="0" max="59" placeholder="Минут">
+                <input type="number" class="sat-do" min="0" max="23" placeholder="Сат" disabled>
+                <input type="number" class="minut-do" min="0" max="59" placeholder="Минут" disabled>
+            </div>
+        </div>
+        <input type="submit" class="snimi" value="креирај">
+        <div id="poruka" class="skriven"></div>
+    </form>

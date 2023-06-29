@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Догађај</title>
+	<meta name="apitoken" content="Y3nRPB9Gx8WqEValHUgcpds9RFW2qK28LUzkWDH155tiUGBAeqxfmFVJEv4E1wA8d5hATEJiIOdTVNMvrEMoSMd38p">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script src="js/kreacija.js"></script>
+    <link rel="stylesheet" href="css\lokacija&korisnik.css">
+</head>
+<body>
+    <form id="kreiranje_forma">
+		<div class="form-container">
+		<label for="slika">Слика</label>
+		<input type="text" id="slika" name="slika" placeholder="Овде унети URL слике" required>
+		
+		<label for="slug">Слуг</label>
+		<input type="text" id="slug" name="slug" placeholder="Овде унети слаг" required>
+		
+		<label for="naslov">Наслов</label>
+		<input type="text" id="naslov" name="naslov" placeholder="Овде унети наслов" required>
+		
+		<label for="opis">Опис</label>
+		<textarea id="opis" name="opis" placeholder="Овде унети опис" required></textarea>
+		
+		<label for="kratki_opis">Кратки опис</label>
+		<textarea id="kratki_opis" name="kratki_opis" placeholder="Овде унети кратки опис" required></textarea>
+        
+        <button type="submit" id="registracija" name="registracija">Региструј се</button>
+	</div>
+	<div></div>
+	</form>
+</body>
+</html>
