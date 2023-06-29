@@ -3,7 +3,6 @@ $(document).ready(function() {
   
     $('#radno-vreme-div').on('change', '.sat-od', function() {
       var radnoVremeOd = $(this).val();
-      var minutOd = $(this).siblings('.minut-od');
       var satDo = $(this).siblings('.sat-do');
       var minutDo = $(this).siblings('.minut-do');
   
@@ -45,7 +44,6 @@ $(document).ready(function() {
         apitoken: $('meta[name="apitoken"]').attr('content')
       };
   
-      console.log(workingHours);
   
       $.ajax({
         url: 'https://vsis.mef.edu.rs/projekat/ulaznice/public_html/api/lokacija',

@@ -77,3 +77,7 @@ select {
 .dan-container:last-child {
   margin-right: 0;
 }
+
+.error {
+  color: red;
+}
